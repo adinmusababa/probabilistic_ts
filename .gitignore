@@ -1,0 +1,5 @@
+*.env
+*.venv
+*.claude
+*.pytest_cache
+*.exps

@@ -1,0 +1,12 @@
+# Titik awal training baseline, bukan hasil tuning.
+seed: 42
+batch_size: 64
+lr: 6.0e-4
+weight_decay: 0.01
+epochs: 30
+patience: 5          # early stopping pada NLL validasi
+min_delta: 0.0
+grad_clip: 1.0
+train_stride: 1      # naikkan (mis. 4 atau 24) untuk percobaan cepat
+num_workers: 0       # 0 paling aman di Windows
+device: null         # null = cuda bila tersedia, selain itu cpu

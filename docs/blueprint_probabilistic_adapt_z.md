@@ -311,6 +311,8 @@ ETTm1
 ETTm2
 ```
 
+Semua data EET akan diload dari Supabase yang akan diload menggunakan API langsung tanpa mendownload terlebih dahulu. Semua komponen yang akan diproses sebelum final tidak akan disimpan dalam bentuk file .csv atau apapun, sebelum final cukup simpan dalam variabel atau dalam sebuh fungsi.
+
 ---
 
 # 9. Data Split
@@ -359,7 +361,7 @@ fit(all data)
 # 10. Preprocessing Pipeline
 
 ```text
-Raw CSV
+Data EET dari Supabase
    ↓
 Parse datetime
    ↓
@@ -1072,16 +1074,24 @@ Yang berbeda hanya komponen adaptation/model yang memang sedang dibandingkan.
 
 Implementasi tidak dilakukan sekaligus.
 
-## Program 01 — Dataset Download
+## Program 01 — Dataset 
 
 ```text
-download_dataset.py
+Gunakan data dari Supabase, dengan konfigurasi, API sudah ada di dalam .env:
+SUPABASE_DB_HOST
+SUPABASE_DB_PORT
+SUPABASE_DB_NAME
+SUPABASE_DB_USER
+SUPABASE_DB_PASSWORD
+
+SUPABASE_URL
+SUPABASE_ANON_KEY
 ```
 
 Tujuan:
 
 ```text
-ETT → local data
+menggunakan data yang tersentral di Supabase
 ```
 
 ---

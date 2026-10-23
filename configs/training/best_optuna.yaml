@@ -1,0 +1,11 @@
+seed: 42
+batch_size: 64
+epochs: 30
+patience: 5
+min_delta: 0.0
+grad_clip: 1.0
+train_stride: 1
+num_workers: 0
+device: null
+lr: 0.00014321698289111514
+weight_decay: 0.00014936568554617635
