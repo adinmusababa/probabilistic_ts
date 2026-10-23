@@ -1,0 +1,16 @@
+context_length: 96
+prediction_length: 24
+input_size: 7
+lags_sequence: [1, 2, 3, 4, 5, 6, 7, 24, 48, 168]
+num_time_features: 4
+scaling: false
+distribution_output: student_t
+d_model: 64
+encoder_layers: 2
+decoder_layers: 2
+encoder_attention_heads: 2
+decoder_attention_heads: 2
+encoder_ffn_dim: 128
+decoder_ffn_dim: 128
+dropout: 0.1
+num_parallel_samples: 100
