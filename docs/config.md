@@ -17,3 +17,6 @@ python -m src.training.run `
   --model-config configs/model/best_optuna.yaml `
   --train-config configs/training/best_optuna.yaml `
   --out-dir exps/final_best
+
+
+python -m src.training.run --dataset ETTh1 --pred-len 24 --model-config configs/model/best_optuna.yaml --train-config configs/training/best_optuna.yaml --out-dir exps/ETTh1_H24_optuna_seed42

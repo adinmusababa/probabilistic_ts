@@ -2,15 +2,15 @@
   "train_cfg": {
     "seed": 42,
     "batch_size": 64,
-    "lr": 0.0006,
-    "weight_decay": 0.01,
     "epochs": 30,
     "patience": 5,
     "min_delta": 0.0,
     "grad_clip": 1.0,
     "train_stride": 1,
     "num_workers": 0,
-    "device": null
+    "device": null,
+    "lr": 0.0002703616066662003,
+    "weight_decay": 0.0007476312062252305
   },
   "model_cfg": {
     "context_length": 96,
@@ -31,15 +31,15 @@
     "num_time_features": 4,
     "scaling": false,
     "distribution_output": "student_t",
-    "d_model": 64,
-    "encoder_layers": 2,
-    "decoder_layers": 2,
     "encoder_attention_heads": 2,
     "decoder_attention_heads": 2,
-    "encoder_ffn_dim": 128,
-    "decoder_ffn_dim": 128,
-    "dropout": 0.05,
-    "num_parallel_samples": 100
+    "num_parallel_samples": 100,
+    "dropout": 0.1,
+    "d_model": 128,
+    "encoder_layers": 2,
+    "decoder_layers": 3,
+    "encoder_ffn_dim": 512,
+    "decoder_ffn_dim": 512
   },
   "data": {
     "dataset": "ETTh1",
@@ -73,10 +73,10 @@
     "past_length": 264,
     "horizon": 24
   },
-  "best_val_nll": 1.9435773902854012,
-  "best_epoch": 6,
-  "epochs_run": 11,
-  "duration_seconds": 379.8,
+  "best_val_nll": 1.9289464583691494,
+  "best_epoch": 11,
+  "epochs_run": 16,
+  "duration_seconds": 1443.6,
   "device": "cpu",
   "versions": {
     "python": "3.14.5",
@@ -85,5 +85,5 @@
     "numpy": "2.5.3",
     "polars": "2.0.0"
   },
-  "git_hash": "bb148332fe420e3c9b836625b577b4ab4da45564"
+  "git_hash": "ecf86945abc4a1a41e5c46a35967bd9c8cb59c37"
 }

@@ -18,9 +18,9 @@ distribution_output: student_t
 encoder_attention_heads: 2
 decoder_attention_heads: 2
 num_parallel_samples: 100
-dropout: 0.15000000000000002
-d_model: 32
+dropout: 0.1
+d_model: 128
 encoder_layers: 2
-decoder_layers: 2
-encoder_ffn_dim: 64
-decoder_ffn_dim: 64
+decoder_layers: 3
+encoder_ffn_dim: 512
+decoder_ffn_dim: 512
