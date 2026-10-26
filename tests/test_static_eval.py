@@ -10,7 +10,7 @@ from src.evaluation.static_eval import evaluate_baseline, evaluate_model
 from src.models.probabilistic_transformer import ProbabilisticTransformer
 from tests.test_data import synthetic_frame
 from tests.test_model_smoke import _batch, _cfg
-
+  
 
 def _small_cfg(input_size=7):
     cfg = _cfg(input_size)
