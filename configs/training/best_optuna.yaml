@@ -7,5 +7,5 @@ grad_clip: 1.0
 train_stride: 1
 num_workers: 0
 device: null
-lr: 0.00014321698289111514
-weight_decay: 0.00014936568554617635
+lr: 0.0002703616066662003
+weight_decay: 0.0007476312062252305
