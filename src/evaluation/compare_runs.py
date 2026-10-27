@@ -68,6 +68,7 @@ def summary_table(runs: dict[str, dict], sort_by: str = "crps", digits: int = 4)
         rows.append(
             {
                 "run": name,
+                "strategy": m.get("online", {}).get("strategy"),
                 "scaling": str(mc.get("scaling")),
                 "d_model": mc.get("d_model"),
                 "layers": f"{mc.get('encoder_layers')}/{mc.get('decoder_layers')}",
@@ -96,7 +97,9 @@ def summary_table(runs: dict[str, dict], sort_by: str = "crps", digits: int = 4)
     if not rows:
         return pl.DataFrame()
     df = pl.DataFrame(rows, infer_schema_length=None)
-    df = df.with_columns([pl.col(c).round(digits) for c in METRIC_COLS if c in df.columns])
+    # Round only numeric metric columns; skip any column that contains nulls (e.g., nll_ch when NLL not computed)
+    numeric_cols = [c for c in METRIC_COLS if c in df.columns and df[c].dtype.is_numeric()]
+    df = df.with_columns([pl.col(c).round(digits) for c in numeric_cols])
     if sort_by in df.columns:
         df = df.sort(sort_by, nulls_last=True)
     return df

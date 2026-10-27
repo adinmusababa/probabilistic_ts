@@ -24,7 +24,7 @@ class ModelLearner(OnlineLearner):
 
     @staticmethod
     def _f32(a: np.ndarray) -> torch.Tensor:
-        return torch.from_numpy(np.ascontiguousarray(a, dtype=np.float32))
+        return torch.from_numpy(np.ascontiguousarray(a, dtype=np.float32).copy())
 
     def _to_device(self, batch: dict) -> dict:
         return {k: v.to(self.device) for k, v in batch.items()}
